@@ -1,0 +1,3260 @@
+   Error: InternalServerError: 502 {"error":{"message":"Upstream request failed after retries","type":"upstream_error"},"type":"error"}
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:91:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 502,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    error: {
+      message: 'Upstream request failed after retries',
+      type: 'upstream_error'
+    },
+    type: 'error'
+  }
+}
+   Error: InternalServerError: 502 {"error":{"message":"Upstream request failed after retries","type":"upstream_error"},"type":"error"}
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:91:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 502,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    error: {
+      message: 'Upstream request failed after retries',
+      type: 'upstream_error'
+    },
+    type: 'error'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: APIConnectionError: Connection error.
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:621:13)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    ... 5 lines matching cause stack trace ...
+    at categorizeProducts (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:391:3) {
+  status: undefined,
+  headers: undefined,
+  requestID: undefined,
+  error: undefined,
+  cause: TypeError: fetch failed
+      at node:internal/deps/undici/undici:12345:11
+      at Anthropic.fetchWithTimeout (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:745:14)
+      at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:576:22)
+      at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+      at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+      at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+      at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+      at async Promise.all (index 0)
+      at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3)
+      at categorizeProducts (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:391:3) {
+    cause: Error: read ECONNRESET
+        at __node_internal_captureLargerStackTrace (node:internal/errors:563:5)
+        at __node_internal_errnoException (node:internal/errors:690:12)
+        at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20) {
+      errno: -4077,
+      code: 'ECONNRESET',
+      syscall: 'read'
+    }
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+   Error: RateLimitError: 429 error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 1)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(12) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object],
+      'connection' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    code: 'USAGE_LIMIT_EXCEEDED',
+    message: 'error: code=429 reason="DAILY_LIMIT_EXCEEDED" message="daily usage limit exceeded" metadata=map[]'
+  }
+}
+^C^C

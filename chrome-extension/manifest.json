@@ -1,0 +1,41 @@
+﻿{
+  "manifest_version": 3,
+  "name": "兜底插件",
+  "version": "1.3",
+  "description": "自动将购物网站订单同步到 inflyway.com",
+  "permissions": [
+    "activeTab",
+    "offscreen",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.inflyway.com/*",
+    "https://inflyway.com/*",
+    "https://store.flylinking.com/*",
+    "https://*.flylinking.com/*",
+    "http://localhost:*/*",
+    "https://*.traefik.me/*",
+    "file:///*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.inflyway.com/*", "https://inflyway.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://localhost:*/*",
+      "https://*.traefik.me/*",
+      "https://whatsapp-whatsapp-9xkkac-c0aeed-23-94-38-181.traefik.me/*",
+      "https://luxuryootd.com/*",
+      "https://*.luxuryootd.com/*"
+    ]
+  }
+}
+

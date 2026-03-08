@@ -1,0 +1,45 @@
+   Error: RateLimitError: 429 {"error":{"message":"Concurrency limit exceeded for user, please retry later","type":"rate_limit_error"},"type":"error"}
+    at Function.generate (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\core\error.ts:87:14)
+    at Anthropic.makeStatusError (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:443:28)
+    at Anthropic.makeRequest (E:\购物网站\luxury-shop\node_modules\@anthropic-ai\sdk\src\client.ts:678:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at withRetry (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:77:14)
+    at identifyProductDetails (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:125:24)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:415:29)
+    at <anonymous> (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:298:7)
+    at async Promise.all (index 0)
+    at runWithConcurrency (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\categorize-products.ts:301:3) {
+  status: 429,
+  headers: HeadersList {
+    cookies: null,
+    [Symbol(headers map)]: Map(11) {
+      'access-control-allow-headers' => [Object],
+      'access-control-allow-methods' => [Object],
+      'alt-svc' => [Object],
+      'content-length' => [Object],
+      'content-security-policy' => [Object],
+      'content-type' => [Object],
+      'date' => [Object],
+      'referrer-policy' => [Object],
+      'via' => [Object],
+      'x-content-type-options' => [Object],
+      'x-frame-options' => [Object]
+    },
+    [Symbol(headers map sorted)]: [
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array], [Array],
+      [Array]
+    ]
+  },
+  requestID: null,
+  error: {
+    error: {
+      message: 'Concurrency limit exceeded for user, please retry later',
+      type: 'rate_limit_error'
+    },
+    type: 'error'
+  }
+}

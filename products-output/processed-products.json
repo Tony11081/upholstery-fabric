@@ -1,0 +1,54 @@
+[
+  {
+    "titleEn": "Chanel Travel Bag",
+    "descriptionEn": "Elegant designer bag with premium craftsmanship. Spacious interior. Lightweight design. Size: 45 x 27 cm.",
+    "slug": "chanel-travel-bag-1",
+    "price": 175,
+    "currency": "USD",
+    "inventory": 10,
+    "tags": [
+      "chanel",
+      "designer",
+      "luxury"
+    ],
+    "categorySlug": "bags",
+    "isNew": true,
+    "isActive": true,
+    "originalDesc": "P175 香奈儿旅行袋！特点是容量巨大！材质也是今年大热的流行元素 关键实用性极好！整个包又轻便又大！做妈咪包也是超时髦！无敌性价比超高 尺寸  45 27 货"
+  },
+  {
+    "titleEn": "Chanel Denim Tote Bag",
+    "descriptionEn": "Elegant designer bag with premium craftsmanship. Vintage-inspired finish. Size: 30 x 25 cm.",
+    "slug": "chanel-denim-tote-bag-2",
+    "price": 175,
+    "currency": "USD",
+    "inventory": 10,
+    "tags": [
+      "chanel",
+      "denim",
+      "designer",
+      "luxury"
+    ],
+    "categorySlug": "bags",
+    "isNew": true,
+    "isActive": true,
+    "originalDesc": "P175 香奈儿牛仔垃圾袋🎒 经典的牛仔搭配做旧的风格，看上去好有质感！看一眼就喜欢，随意感才是香奈儿托特的特点哦！尺寸：30 25 货号6853"
+  },
+  {
+    "titleEn": "Louis Vuitton Pillow Bag",
+    "descriptionEn": "Elegant designer bag with premium craftsmanship. Runway collection. Size: 24 x 14 cm.",
+    "slug": "louis-vuitton-pillow-bag-3",
+    "price": 100,
+    "currency": "USD",
+    "inventory": 10,
+    "tags": [
+      "louis-vuitton",
+      "designer",
+      "luxury"
+    ],
+    "categorySlug": "bags",
+    "isNew": true,
+    "isActive": true,
+    "originalDesc": "P100 LV 走秀款 枕头包 nano keepall 枕头包，春夏秀款系列，这次lv的款太可了，男女都可以背的款 ，酷酷帅帅可可爱爱～尺寸：24 14 货号"
+  }
+]

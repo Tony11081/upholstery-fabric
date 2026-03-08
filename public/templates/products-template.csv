@@ -1,0 +1,2 @@
+title,slug,price,currency,description,category_slug,category_name,tags,image_urls,inventory,is_new,is_best_seller,is_active
+Chanel Travel Bag,chanel-travel-bag,175,USD,"Large capacity, casual color.",bags,Bags,"travel|classic","https://example.com/image-1.jpg|https://example.com/image-2.jpg",12,true,false,true

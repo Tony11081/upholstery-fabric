@@ -1,0 +1,17 @@
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+Disambiguate duplicates (apply)
+Disambiguation failed PrismaClientKnownRequestError: 
+Invalid `prisma.product.findMany()` invocation:
+
+
+Server has closed the connection.
+    at $n.handleRequestError (e:\购物网站\luxury-shop\node_modules\@prisma\client\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (e:\购物网站\luxury-shop\node_modules\@prisma\client\runtime\library.js:121:6623)
+    at $n.request (e:\购物网站\luxury-shop\node_modules\@prisma\client\runtime\library.js:121:6307)
+    at async l (e:\购物网站\luxury-shop\node_modules\@prisma\client\runtime\library.js:130:9633)
+    at main (e:\%E8%B4%AD%E7%89%A9%E7%BD%91%E7%AB%99\luxury-shop\scripts\disambiguate-duplicates.ts:165:19) {
+  code: 'P1017',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Product' }
+}

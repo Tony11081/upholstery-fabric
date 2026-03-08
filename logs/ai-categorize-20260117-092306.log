@@ -1,0 +1,6 @@
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.2.3] injecting env (7) from .env.local -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+
+🏷️  开始识别产品品牌和类别...
+
+正在查询数据库...

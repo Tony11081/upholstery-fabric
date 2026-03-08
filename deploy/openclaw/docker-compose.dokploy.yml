@@ -1,0 +1,47 @@
+version: "3.9"
+
+services:
+  openclaw-gateway:
+    image: ghcr.io/openclaw/openclaw:latest
+    container_name: openclaw-gateway
+    restart: unless-stopped
+    command:
+      - /bin/sh
+      - -lc
+      - |
+        set -e
+        [ -n "${OPENCLAW_GATEWAY_TOKEN:-}" ] || { echo "OPENCLAW_GATEWAY_TOKEN is required"; exit 1; }
+        mkdir -p /data/.openclaw /data/logs
+
+        openclaw config set gateway.mode local
+        openclaw config set gateway.port 18789 --json
+        openclaw config set gateway.bind lan
+        openclaw config set gateway.auth.mode token
+        openclaw config set gateway.auth.token "${OPENCLAW_GATEWAY_TOKEN}"
+
+        openclaw config set gateway.http.enabled true --json
+        openclaw config set gateway.http.endpoints.chatCompletions.enabled true --json
+        openclaw config set gateway.http.endpoints.chatCompletions.requireAuth true --json
+
+        openclaw gateway run \
+          --allow-unconfigured \
+          --force \
+          --bind lan \
+          --port 18789 \
+          --raw-stream-path /data/logs/raw-stream.jsonl
+    environment:
+      OPENCLAW_PROFILE: production
+      OPENCLAW_STATE_DIR: /data/.openclaw
+      OPENCLAW_CONFIG_PATH: /data/.openclaw/openclaw.json
+      OPENCLAW_CHANNELS_DISABLE_NATIVE_GATEWAY_PUBLISH: "1"
+      OPENCLAW_GATEWAY_URL: ws://127.0.0.1:18789
+      OPENCLAW_GATEWAY_LOG: "1"
+      OPENCLAW_GATEWAY_TOKEN: ${OPENCLAW_GATEWAY_TOKEN}
+    ports:
+      - "18789:18789"
+    volumes:
+      - openclaw_data:/data
+
+volumes:
+  openclaw_data:
+    driver: local

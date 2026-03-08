@@ -1,0 +1,6 @@
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+Normalize catalog (apply)
+Updated products: 0
+Skipped placeholder titles: 996
+Deactivated non-canonical categories: 218

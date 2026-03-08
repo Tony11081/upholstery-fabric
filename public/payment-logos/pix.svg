@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 44" role="img" aria-label="Pix">
+  <rect width="130" height="44" rx="8" fill="#ffffff"/>
+  <g transform="translate(23 22)">
+    <path d="M0-10 L10 0 L0 10 L-10 0 Z" fill="#32BCAD"/>
+    <path d="M0-5 L5 0 L0 5 L-5 0 Z" fill="#ffffff"/>
+  </g>
+  <text x="78" y="29" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#32BCAD">pix</text>
+</svg>

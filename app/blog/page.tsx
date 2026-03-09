@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { BlogIndex } from "@/components/blog/blog-index";
-import { getBlogIndexCopy, getBlogPath, getBlogPosts } from "@/lib/content/blog";
+import { getBlogIndexCopy, getBlogPath, getIndexableBlogPosts } from "@/lib/content/blog";
 import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
 
 const siteUrl = getSiteUrl();
@@ -28,6 +28,6 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const posts = getBlogPosts("en");
+  const posts = getIndexableBlogPosts("en");
   return <BlogIndex locale="en" posts={posts} />;
 }

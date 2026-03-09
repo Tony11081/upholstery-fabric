@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogIndex } from "@/components/blog/blog-index";
-import { BlogLocale, getBlogIndexCopy, getBlogPath, getBlogPosts, isBlogLocale } from "@/lib/content/blog";
+import {
+  BlogLocale,
+  getBlogIndexCopy,
+  getBlogPath,
+  getIndexableBlogPosts,
+  isBlogLocale,
+} from "@/lib/content/blog";
 import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
 
 const siteUrl = getSiteUrl();
@@ -52,6 +58,6 @@ export default async function BlogLocalePage({
   }
 
   const typedLocale = locale as BlogLocale;
-  const posts = getBlogPosts(typedLocale);
+  const posts = getIndexableBlogPosts(typedLocale);
   return <BlogIndex locale={typedLocale} posts={posts} />;
 }

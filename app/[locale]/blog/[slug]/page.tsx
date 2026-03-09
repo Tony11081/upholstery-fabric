@@ -5,6 +5,7 @@ import {
   BlogLocale,
   getBlogPath,
   getBlogPost,
+  isLegacyFashionBlogSlug,
   isBlogLocale,
 } from "@/lib/content/blog";
 import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
@@ -35,6 +36,9 @@ export async function generateMetadata({
   return {
     title,
     description: post.excerpt,
+    robots: isLegacyFashionBlogSlug(slug)
+      ? { index: false, follow: true }
+      : undefined,
     alternates: {
       canonical: url,
       languages: buildLanguages(slug),

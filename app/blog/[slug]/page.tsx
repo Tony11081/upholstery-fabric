@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogArticle } from "@/components/blog/blog-article";
-import { getBlogPath, getBlogPost } from "@/lib/content/blog";
+import { getBlogPath, getBlogPost, isLegacyFashionBlogSlug } from "@/lib/content/blog";
 import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
 
 const siteUrl = getSiteUrl();
@@ -28,6 +28,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    robots: isLegacyFashionBlogSlug(slug)
+      ? { index: false, follow: true }
+      : undefined,
     alternates: {
       canonical: url,
       languages: buildLanguages(slug),

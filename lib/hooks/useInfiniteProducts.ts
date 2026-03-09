@@ -20,6 +20,11 @@ type ProductQueryParams = {
   limit?: number;
 };
 
+type UseInfiniteProductsOptions = {
+  initialData?: ProductListItem[];
+  staleTime?: number;
+};
+
 async function fetchProducts(queryString: string) {
   const res = await fetch(`/api/products${queryString}`);
   if (!res.ok) {
@@ -54,16 +59,27 @@ function buildQueryString(params: ProductQueryParams, page: number, limit: numbe
   return searchParams.toString() ? `?${searchParams.toString()}` : "";
 }
 
-export function useInfiniteProducts(params: ProductQueryParams = {}) {
+export function useInfiniteProducts(
+  params: ProductQueryParams = {},
+  options: UseInfiniteProductsOptions = {},
+) {
   const limit = params.limit ?? 30;
   return useInfiniteQuery({
     queryKey: ["products-infinite", params],
     queryFn: ({ pageParam = 0 }) =>
       fetchProducts(buildQueryString(params, Number(pageParam) || 0, limit)),
-    staleTime: 60_000,
+    staleTime: options.staleTime ?? 60_000,
     refetchOnWindowFocus: false,
     refetchOnReconnect: false,
     initialPageParam: 0,
+    ...(options.initialData
+      ? {
+          initialData: {
+            pages: [options.initialData],
+            pageParams: [0],
+          },
+        }
+      : {}),
     getNextPageParam: (lastPage, allPages) =>
       lastPage.length < limit ? undefined : allPages.length,
   });

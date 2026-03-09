@@ -1,17 +1,17 @@
 import { getBrands } from "@/lib/data/brands";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { BRAND_NAME, absoluteUrl } from "@/lib/utils/site";
+import { absoluteUrl } from "@/lib/utils/site";
 
 export const metadata: Metadata = {
-  title: "Shop by Brand",
-  description: "Browse luxury products by your favorite brands",
+  title: "Designer fabric brands",
+  description: "Browse designer fabric brands, upholstery textiles, archive yardage, and maison-led fabric catalogs.",
   alternates: {
     canonical: absoluteUrl("/brands"),
   },
 };
 
-export const revalidate = 3600; // 1 hour
+export const dynamic = "force-dynamic";
 
 export default async function BrandsPage() {
   const brands = await getBrands();
@@ -21,9 +21,9 @@ export default async function BrandsPage() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 space-y-4 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-muted">Curated brands</p>
-          <h1 className="font-display text-4xl md:text-5xl">Shop by Brand</h1>
+          <h1 className="font-display text-4xl md:text-5xl">Browse designer fabric brands</h1>
           <p className="mx-auto max-w-2xl text-muted">
-            Discover luxury products from the world's most prestigious brands
+            Explore brand-led fabric catalogs, upholstery lots, coated textiles, and archive yardage by maison.
           </p>
         </div>
 

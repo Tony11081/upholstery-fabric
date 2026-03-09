@@ -5,12 +5,14 @@ import { MasonryGrid } from "@/components/home/masonry-grid";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useInfiniteProducts } from "@/lib/hooks/useInfiniteProducts";
 import { useToast } from "@/lib/hooks/useToast";
+import type { ProductListItem } from "@/lib/data/products";
 
 type BrandProductsClientProps = {
   slug: string;
+  initialProducts?: ProductListItem[];
 };
 
-export function BrandProductsClient({ slug }: BrandProductsClientProps) {
+export function BrandProductsClient({ slug, initialProducts = [] }: BrandProductsClientProps) {
   const {
     data,
     isFetching,
@@ -20,7 +22,7 @@ export function BrandProductsClient({ slug }: BrandProductsClientProps) {
     isError,
     error,
     refetch,
-  } = useInfiniteProducts({ brand: slug, limit: 30 });
+  } = useInfiniteProducts({ brand: slug, limit: 30 }, { initialData: initialProducts });
   const { toast } = useToast();
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
   const products = useMemo(() => data?.pages.flat() ?? [], [data]);

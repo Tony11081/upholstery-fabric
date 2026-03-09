@@ -28,14 +28,33 @@ const faqs = [
 
 export const metadata = {
   title: "Help Center",
+  description:
+    "Find answers about fabric ordering, tracked shipping, swatches, and concierge support for designer fabrics by the yard.",
 };
 
 export default function HelpPage() {
   const supportEmail = process.env.SUPPORT_EMAIL ?? "support@moppetbrandname.shop";
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
 
   return (
     <main className="min-h-screen bg-background px-4 pb-20 pt-10 sm:px-6 md:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="mx-auto max-w-5xl space-y-8">
+        <h1 className="sr-only">Help center for fabric orders and concierge support</h1>
         <SectionHeading
           eyebrow="Help Center"
           title="Support at every step"

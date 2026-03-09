@@ -371,6 +371,12 @@ const LOCALE_LABELS: Record<BlogLocale, string> = {
   es: "es-ES",
 };
 
+const LEGACY_FASHION_BLOG_SLUGS = new Set([
+  "choose-the-right-bag-size",
+  "gift-guide-under-300",
+  "size-guide-shoes-rings",
+]);
+
 export const getBlogIndexCopy = (locale: BlogLocale) => BLOG_INDEX_COPY[locale];
 
 export const getBlogPosts = (locale: BlogLocale) => {
@@ -378,6 +384,11 @@ export const getBlogPosts = (locale: BlogLocale) => {
     (a, b) => new Date(b.publishAt).getTime() - new Date(a.publishAt).getTime(),
   );
 };
+
+export const isLegacyFashionBlogSlug = (slug: string) => LEGACY_FASHION_BLOG_SLUGS.has(slug);
+
+export const getIndexableBlogPosts = (locale: BlogLocale) =>
+  getBlogPosts(locale).filter((post) => !isLegacyFashionBlogSlug(post.slug));
 
 export const getBlogPost = (locale: BlogLocale, slug: string) => {
   return BLOG_POSTS[locale].find((post) => post.slug === slug) ?? null;

@@ -2,8 +2,10 @@ import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { isProd } from "@/lib/utils/env";
 import { mockCategories, mockProducts } from "@/lib/data/mock-data";
-import { BLOG_LOCALES, getBlogPath, getBlogPosts } from "@/lib/content/blog";
+import { BLOG_LOCALES, getBlogPath, getIndexableBlogPosts } from "@/lib/content/blog";
 import { getSiteUrl } from "@/lib/utils/site";
+
+export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
@@ -18,6 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${siteUrl}/categories`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/brands`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.8,
@@ -50,7 +58,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const blogPostRoutes = BLOG_LOCALES.flatMap((locale) =>
-    getBlogPosts(locale).map((post) => ({
+    getIndexableBlogPosts(locale).map((post) => ({
       url: `${siteUrl}${getBlogPath(locale, post.slug)}`,
       lastModified: new Date(post.publishAt),
       changeFrequency: "monthly" as const,
@@ -59,13 +67,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
 
   try {
-    const [products, categories, editorialPosts] = await Promise.all([
+    const [products, categories, brands, editorialPosts] = await Promise.all([
       prisma.product.findMany({
         where: { isActive: true },
         select: { slug: true, updatedAt: true },
       }),
       prisma.category.findMany({
         where: { status: "ACTIVE" },
+        select: { slug: true, updatedAt: true },
+      }),
+      prisma.brand.findMany({
+        where: { isActive: true },
         select: { slug: true, updatedAt: true },
       }),
       prisma.contentPost.findMany({
@@ -89,6 +101,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     }));
 
+    const brandRoutes = brands.map((brand) => ({
+      url: `${siteUrl}/brands/${brand.slug}`,
+      lastModified: brand.updatedAt,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
+
     const editorialRoutes = editorialPosts.map((post) => ({
       url: `${siteUrl}/editorial/${post.slug}`,
       lastModified: post.updatedAt ?? post.publishAt ?? now,
@@ -101,6 +120,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       ...blogIndexRoutes,
       ...blogPostRoutes,
       ...editorialRoutes,
+      ...brandRoutes,
       ...categoryRoutes,
       ...productRoutes,
     ];

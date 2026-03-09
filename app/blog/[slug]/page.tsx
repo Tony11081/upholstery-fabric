@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogArticle } from "@/components/blog/blog-article";
 import { getBlogPath, getBlogPost, isLegacyFashionBlogSlug } from "@/lib/content/blog";
-import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
+import { BRAND_NAME, DEFAULT_OG_IMAGE, absoluteUrl, getSiteUrl } from "@/lib/utils/site";
 
 const siteUrl = getSiteUrl();
 
@@ -21,9 +21,10 @@ export async function generateMetadata({
   const post = getBlogPost("en", slug);
   if (!post) return {};
 
-  const title = `${post.title} | ${BRAND_NAME}`;
+  const title = post.title;
   const description = post.excerpt;
   const url = `${siteUrl}${getBlogPath("en", slug)}`;
+  const image = post.coverImage ?? absoluteUrl(DEFAULT_OG_IMAGE);
 
   return {
     title,
@@ -36,10 +37,17 @@ export async function generateMetadata({
       languages: buildLanguages(slug),
     },
     openGraph: {
-      title,
+      title: `${title} | ${BRAND_NAME}`,
       description,
       url,
       type: "article",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${BRAND_NAME}`,
+      description,
+      images: [image],
     },
   };
 }

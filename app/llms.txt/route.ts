@@ -37,6 +37,7 @@ export async function GET() {
     "## Key Catalog Hubs",
     `- Categories index: ${siteUrl}/categories`,
     `- Brands index: ${siteUrl}/brands`,
+    `- Product feed: ${siteUrl}/feeds/products.json`,
     `- Editorial index: ${siteUrl}/editorial`,
     `- Help center: ${siteUrl}/help`,
     `- Policies: ${siteUrl}/policies`,

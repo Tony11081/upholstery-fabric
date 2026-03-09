@@ -8,7 +8,7 @@ import {
   isLegacyFashionBlogSlug,
   isBlogLocale,
 } from "@/lib/content/blog";
-import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
+import { BRAND_NAME, DEFAULT_OG_IMAGE, absoluteUrl, getSiteUrl } from "@/lib/utils/site";
 
 const siteUrl = getSiteUrl();
 
@@ -31,7 +31,8 @@ export async function generateMetadata({
   if (!post) return {};
 
   const url = `${siteUrl}${getBlogPath(typedLocale, slug)}`;
-  const title = `${post.title} | ${BRAND_NAME}`;
+  const title = post.title;
+  const image = post.coverImage ?? absoluteUrl(DEFAULT_OG_IMAGE);
 
   return {
     title,
@@ -44,10 +45,17 @@ export async function generateMetadata({
       languages: buildLanguages(slug),
     },
     openGraph: {
-      title,
+      title: `${title} | ${BRAND_NAME}`,
       description: post.excerpt,
       url,
       type: "article",
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${BRAND_NAME}`,
+      description: post.excerpt,
+      images: [image],
     },
   };
 }

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { BRAND_NAME, DEFAULT_OG_IMAGE, absoluteUrl } from "@/lib/utils/site";
 import { getBrandInfo } from "@/lib/utils/brands";
 import { RelatedProducts } from "@/components/product/related-products";
+import { getProductAttributeValues } from "@/lib/seo/product-attributes";
 
 export const revalidate = 60;
 
@@ -121,6 +122,50 @@ export default async function ProductPage({ params }: Props) {
   const price = product.discountedPrice ?? Number(product.price);
   const priceValidUntil = new Date();
   priceValidUntil.setMonth(priceValidUntil.getMonth() + 6);
+  const attributes = getProductAttributeValues(product);
+  const additionalProperty = [
+    {
+      "@type": "PropertyValue",
+      name: "Selling unit",
+      value: "1 yard",
+    },
+    ...(attributes.primaryMaterial
+      ? [
+          {
+            "@type": "PropertyValue",
+            name: "Material",
+            value: attributes.primaryMaterial,
+          },
+        ]
+      : []),
+    ...(attributes.primaryColor
+      ? [
+          {
+            "@type": "PropertyValue",
+            name: "Color",
+            value: attributes.primaryColor,
+          },
+        ]
+      : []),
+    ...(attributes.primarySize
+      ? [
+          {
+            "@type": "PropertyValue",
+            name: "Size",
+            value: attributes.primarySize,
+          },
+        ]
+      : []),
+    ...(product.category?.nameEn
+      ? [
+          {
+            "@type": "PropertyValue",
+            name: "Category",
+            value: product.category.nameEn,
+          },
+        ]
+      : []),
+  ];
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -131,6 +176,19 @@ export default async function ProductPage({ params }: Props) {
     image: product.images.map((img) => (img.url.startsWith("http") ? img.url : absoluteUrl(img.url))),
     sku: product.slug,
     category: product.category?.nameEn ?? undefined,
+    color:
+      attributes.colors.length > 1
+        ? attributes.colors.join(", ")
+        : attributes.primaryColor ?? undefined,
+    size:
+      attributes.sizes.length > 1
+        ? attributes.sizes.join(", ")
+        : attributes.primarySize ?? undefined,
+    material:
+      attributes.materials.length > 1
+        ? attributes.materials.join(", ")
+        : attributes.primaryMaterial ?? undefined,
+    additionalProperty: additionalProperty.length ? additionalProperty : undefined,
     brand: {
       "@type": "Brand",
       name: brandName,
@@ -144,6 +202,17 @@ export default async function ProductPage({ params }: Props) {
       itemCondition: "https://schema.org/NewCondition",
       availability: product.inventory > 0 ? "https://schema.org/InStock" : "https://schema.org/BackOrder",
       priceValidUntil: priceValidUntil.toISOString().slice(0, 10),
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        priceCurrency: product.currency,
+        price: Number.isFinite(price) ? price.toFixed(2) : "0.00",
+        unitText: "1 yard",
+        referenceQuantity: {
+          "@type": "QuantitativeValue",
+          value: 1,
+          unitCode: "YRD",
+        },
+      },
       seller: {
         "@type": "Organization",
         name: BRAND_NAME,

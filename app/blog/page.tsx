@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { BlogIndex } from "@/components/blog/blog-index";
-import { getBlogIndexCopy, getBlogPath, getIndexableBlogPosts } from "@/lib/content/blog";
+import { getBlogPath, getIndexableBlogPosts } from "@/lib/content/blog";
 import { BRAND_NAME, getSiteUrl } from "@/lib/utils/site";
 
 const siteUrl = getSiteUrl();
-const copy = getBlogIndexCopy("en");
-const title = `${BRAND_NAME} Journal`;
-const description = copy.subtitle;
+const title = "Fabric Journal";
+const description = "Designer fabric sourcing notes, care guidance, and upholstery-focused editorial updates.";
 
 export const metadata: Metadata = {
   title,
@@ -20,10 +19,15 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title,
+    title: `${title} | ${BRAND_NAME}`,
     description,
     url: `${siteUrl}${getBlogPath("en")}`,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${title} | ${BRAND_NAME}`,
+    description,
   },
 };
 

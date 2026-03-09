@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ConciergeCard } from "@/components/concierge/concierge-card";
+import { BRAND_NAME, DEFAULT_OG_IMAGE, absoluteUrl } from "@/lib/utils/site";
 
 const faqs = [
   {
@@ -26,14 +28,33 @@ const faqs = [
   },
 ];
 
-export const metadata = {
+const helpUrl = absoluteUrl("/help");
+
+export const metadata: Metadata = {
   title: "Help Center",
   description:
     "Find answers about fabric ordering, tracked shipping, swatches, and concierge support for designer fabrics by the yard.",
+  alternates: {
+    canonical: helpUrl,
+  },
+  openGraph: {
+    title: `Help Center | ${BRAND_NAME}`,
+    description:
+      "Find answers about fabric ordering, tracked shipping, swatches, and concierge support for designer fabrics by the yard.",
+    url: helpUrl,
+    images: [absoluteUrl(DEFAULT_OG_IMAGE)],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Help Center | ${BRAND_NAME}`,
+    description:
+      "Find answers about fabric ordering, tracked shipping, swatches, and concierge support for designer fabrics by the yard.",
+    images: [absoluteUrl(DEFAULT_OG_IMAGE)],
+  },
 };
 
 export default function HelpPage() {
-  const supportEmail = process.env.SUPPORT_EMAIL ?? "support@moppetbrandname.shop";
+  const supportEmail = process.env.SUPPORT_EMAIL ?? "support@upholsteryfabric.net";
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

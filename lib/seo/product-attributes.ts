@@ -1,10 +1,8 @@
 import {
-  extractColorOptionsFromText,
   extractColorsFromTags,
-  extractMaterialOptionsFromText,
   extractMaterialsFromTags,
-  extractSizeOptionsFromText,
   extractSizesFromTags,
+  extractColorOptionsFromText,
   normalizeColorValues,
   normalizeMaterialValues,
   normalizeSizeValues,
@@ -14,11 +12,25 @@ type ProductAttributeInput = {
   titleEn?: string | null;
   descriptionEn?: string | null;
   tags?: string[] | null;
+  category?: {
+    nameEn?: string | null;
+  } | null;
   variants?: Array<{
     color?: string | null;
     size?: string | null;
     material?: string | null;
   }> | null;
+};
+
+const CATEGORY_MATERIAL_FALLBACKS: Record<string, string> = {
+  jacquard: "Jacquard",
+  leather: "Leather",
+  vinyl: "Vinyl",
+  cotton: "Cotton",
+  denim: "Denim",
+  lining: "Lining",
+  upholstery: "Upholstery",
+  "fashion fabrics": "Designer Fabric",
 };
 
 function dedupe(values: string[]) {
@@ -34,24 +46,27 @@ function dedupe(values: string[]) {
 export function getProductAttributeValues(input: ProductAttributeInput) {
   const tags = input.tags ?? [];
   const variants = input.variants ?? [];
-  const searchText = `${input.titleEn ?? ""} ${input.descriptionEn ?? ""}`.trim();
+  const title = input.titleEn ?? "";
+  const categoryName = input.category?.nameEn?.trim().toLowerCase() ?? "";
 
   const colors = dedupe([
     ...normalizeColorValues(variants.map((variant) => variant.color).filter(Boolean)),
     ...extractColorsFromTags(tags),
-    ...extractColorOptionsFromText(searchText),
+    ...extractColorOptionsFromText(title),
   ]);
 
   const sizes = dedupe([
     ...normalizeSizeValues(variants.map((variant) => variant.size).filter(Boolean)),
     ...extractSizesFromTags(tags),
-    ...extractSizeOptionsFromText(searchText),
+    "1 Yard",
   ]);
 
   const materials = dedupe([
     ...normalizeMaterialValues(variants.map((variant) => variant.material).filter(Boolean)),
     ...extractMaterialsFromTags(tags),
-    ...extractMaterialOptionsFromText(searchText),
+    ...(categoryName && CATEGORY_MATERIAL_FALLBACKS[categoryName]
+      ? [CATEGORY_MATERIAL_FALLBACKS[categoryName]]
+      : []),
   ]);
 
   return {

@@ -70,7 +70,7 @@ services:
           cp /opt/uootd-template/uootd-generated/*-generated.png /var/www/html/wp-content/uploads/uootd-generated/
 
           find /var/www/html/wp-content/mu-plugins -maxdepth 1 -name '*.php' -print0 | while IFS= read -r -d '' file; do
-            php -r '$file = $argv[1]; $contents = file_get_contents($file); if (strncmp($contents, "\xEF\xBB\xBF", 3) === 0) { file_put_contents($file, substr($contents, 3)); }' "$file"
+            php -r '$$file = $$argv[1]; $$contents = file_get_contents($$file); if (strncmp($$contents, "\xEF\xBB\xBF", 3) === 0) { file_put_contents($$file, substr($$contents, 3)); }' "$$file"
           done
 
           if [ -f /var/www/html/wp-config.php ] && [ ! -s /var/www/html/wp-config.php ]; then

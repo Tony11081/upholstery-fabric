@@ -68,6 +68,7 @@ services:
           cp /opt/uootd-template/uootd-inflyway-blocks.js /var/www/html/wp-content/mu-plugins/
           cp /opt/uootd-site/uootd-shell-config.local.php /var/www/html/wp-content/mu-plugins/uootd-shell-config.local.php
           cp /opt/uootd-template/uootd-generated/*-generated.png /var/www/html/wp-content/uploads/uootd-generated/
+          chown -R www-data:www-data /var/www/html
 
           exec apache2-foreground
 

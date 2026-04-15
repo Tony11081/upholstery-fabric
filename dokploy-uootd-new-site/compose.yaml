@@ -65,6 +65,7 @@ services:
       - -lc
       - |
           set -eu
+          printf "opcache.validate_timestamps=1\nopcache.revalidate_freq=0\n" > /usr/local/etc/php/conf.d/zz-uootd-sync.ini
           sync_uootd_shell() {
             mkdir -p /var/www/html/wp-content/mu-plugins
             mkdir -p /var/www/html/wp-content/uploads/uootd-generated

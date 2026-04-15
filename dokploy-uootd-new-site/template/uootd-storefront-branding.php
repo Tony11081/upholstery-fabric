@@ -822,6 +822,10 @@ function uootd_storefront_branding_render_single_product_secondary_cta() {
 function uootd_storefront_branding_product_tabs( $tabs ) {
 	if ( isset( $tabs['description'] ) ) {
 		$tabs['description']['title'] = uootd_storefront_branding_is_fabric_catalog() ? 'Fabric Details' : 'Details';
+
+		if ( uootd_storefront_branding_is_fabric_catalog() ) {
+			$tabs['description']['callback'] = 'uootd_storefront_branding_render_fabric_description_tab';
+		}
 	}
 
 	if ( isset( $tabs['additional_information'] ) ) {
@@ -831,6 +835,30 @@ function uootd_storefront_branding_product_tabs( $tabs ) {
 	unset( $tabs['reviews'] );
 
 	return $tabs;
+}
+
+function uootd_storefront_branding_render_fabric_description_tab() {
+	global $product;
+
+	if ( ! $product instanceof WC_Product ) {
+		return;
+	}
+
+	$description = trim( (string) $product->get_description() );
+	if ( '' === $description ) {
+		$description = trim( (string) $product->get_short_description() );
+	}
+
+	$formatted = uootd_storefront_branding_format_fabric_description( $description );
+	?>
+	<h2>Description</h2>
+	<?php
+	if ( '' !== $formatted ) {
+		echo wp_kses_post( $formatted );
+		return;
+	}
+
+	echo wp_kses_post( wpautop( $description ) );
 }
 
 function uootd_storefront_branding_related_heading() {

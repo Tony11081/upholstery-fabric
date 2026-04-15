@@ -49,6 +49,9 @@ services:
       - -lc
       - |
           set -eu
+          if [ ! -f /var/www/html/index.php ]; then
+            tar -C /usr/src/wordpress -cf - . | tar -C /var/www/html -xf -
+          fi
           mkdir -p /var/www/html/wp-content/mu-plugins
           mkdir -p /var/www/html/wp-content/uploads/uootd-generated
 
@@ -96,7 +99,7 @@ services:
     command:
       - sh
       - -lc
-      - /opt/uootd-site/scripts/wp-init.sh && while true; do sleep 3600; done
+      - sh /opt/uootd-site/scripts/wp-init.sh && while true; do sleep 3600; done
 
 volumes:
   upholsteryfabric_db:

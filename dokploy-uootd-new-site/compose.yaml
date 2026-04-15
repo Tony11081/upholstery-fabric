@@ -34,19 +34,19 @@ services:
       WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX}
       WORDPRESS_DEBUG: ${WP_DEBUG:-0}
       WORDPRESS_CONFIG_EXTRA: |
-        if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && false !== strpos( (string) $_SERVER['HTTP_X_FORWARDED_PROTO'], 'https' ) ) {
-          $_SERVER['HTTPS'] = 'on';
+        if ( isset( $$_SERVER['HTTP_X_FORWARDED_PROTO'] ) && false !== strpos( (string) $$_SERVER['HTTP_X_FORWARDED_PROTO'], 'https' ) ) {
+          $$_SERVER['HTTPS'] = 'on';
         }
-        $uootd_dynamic_scheme = 'http';
-        if ( ! empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) ) {
-          $uootd_dynamic_scheme = explode( ',', (string) $_SERVER['HTTP_X_FORWARDED_PROTO'] )[0];
-        } elseif ( ! empty( $_SERVER['HTTPS'] ) && 'off' !== $_SERVER['HTTPS'] ) {
-          $uootd_dynamic_scheme = 'https';
+        $$uootd_dynamic_scheme = 'http';
+        if ( ! empty( $$_SERVER['HTTP_X_FORWARDED_PROTO'] ) ) {
+          $$uootd_dynamic_scheme = explode( ',', (string) $$_SERVER['HTTP_X_FORWARDED_PROTO'] )[0];
+        } elseif ( ! empty( $$_SERVER['HTTPS'] ) && 'off' !== $$_SERVER['HTTPS'] ) {
+          $$uootd_dynamic_scheme = 'https';
         }
-        $uootd_dynamic_host = $_SERVER['HTTP_HOST'] ?? '';
-        if ( '' !== $uootd_dynamic_host ) {
-          define( 'WP_HOME', $uootd_dynamic_scheme . '://' . $uootd_dynamic_host );
-          define( 'WP_SITEURL', $uootd_dynamic_scheme . '://' . $uootd_dynamic_host );
+        $$uootd_dynamic_host = $$_SERVER['HTTP_HOST'] ?? '';
+        if ( '' !== $$uootd_dynamic_host ) {
+          define( 'WP_HOME', $$uootd_dynamic_scheme . '://' . $$uootd_dynamic_host );
+          define( 'WP_SITEURL', $$uootd_dynamic_scheme . '://' . $$uootd_dynamic_host );
         } else {
           define( 'WP_HOME', '${WP_SITE_URL}' );
           define( 'WP_SITEURL', '${WP_SITE_URL}' );
@@ -68,9 +68,7 @@ services:
           if [ ! -f /var/www/html/index.php ]; then
             tar -C /usr/src/wordpress -cf - . | tar -C /var/www/html -xf -
           fi
-          if [ -f /var/www/html/wp-config.php ] && ! grep -q 'UOOTD_DYNAMIC_HOST_BOOTSTRAP' /var/www/html/wp-config.php; then
-            rm -f /var/www/html/wp-config.php
-          fi
+          rm -f /var/www/html/wp-config.php
           mkdir -p /var/www/html/wp-content/mu-plugins
           mkdir -p /var/www/html/wp-content/uploads/uootd-generated
 

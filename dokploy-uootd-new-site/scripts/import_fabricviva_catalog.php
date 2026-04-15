@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+// WP-CLI eval-file prepends bootstrap code, so strict_types cannot be declared here.
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit( 1 );

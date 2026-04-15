@@ -124,12 +124,14 @@ cleanup_defaults() {
 }
 
 import_fabricviva_catalog() {
-  if [ ! -f /opt/uootd-site/catalog/fabricviva-catalog.json ]; then
-    echo "FabricViva catalog snapshot not found, skipping catalog import."
+  catalog_path="${FABRICVIVA_CATALOG_PATH:-/opt/uootd-site/catalog/fabricviva-catalog.json}"
+
+  if [ ! -f "$catalog_path" ]; then
+    echo "FabricViva catalog snapshot not found at ${catalog_path}, skipping catalog import."
     return
   fi
 
-  wp eval-file /opt/uootd-site/scripts/import_fabricviva_catalog.php --allow-root
+  FABRICVIVA_CATALOG_PATH="$catalog_path" wp eval-file /opt/uootd-site/scripts/import_fabricviva_catalog.php --allow-root
 }
 
 wait_for_wordpress_files

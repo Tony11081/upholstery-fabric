@@ -58,7 +58,7 @@ services:
     volumes:
       - upholsteryfabric_wordpress:/var/www/html
       - ./template:/opt/uootd-template:ro
-      - ./:/opt/uootd-site:ro
+      - ./uootd-shell-config.local.php:/opt/uootd-shell-config.local.php:ro
     restart: unless-stopped
     command:
       - bash
@@ -83,7 +83,7 @@ services:
           cp /opt/uootd-template/uootd-checkout-branding.js /var/www/html/wp-content/mu-plugins/
           cp /opt/uootd-template/uootd-inflyway-gateway.php /var/www/html/wp-content/mu-plugins/
           cp /opt/uootd-template/uootd-inflyway-blocks.js /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-site/uootd-shell-config.local.php /var/www/html/wp-content/mu-plugins/uootd-shell-config.local.php
+          cp /opt/uootd-shell-config.local.php /var/www/html/wp-content/mu-plugins/uootd-shell-config.local.php
           cp /opt/uootd-template/uootd-generated/*-generated.png /var/www/html/wp-content/uploads/uootd-generated/
 
           find /var/www/html/wp-content/mu-plugins -maxdepth 1 -name '*.php' -print0 | while IFS= read -r -d '' file; do
@@ -119,15 +119,17 @@ services:
       WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD}
       WP_ADMIN_EMAIL: ${WP_ADMIN_EMAIL}
       TZ: ${TZ:-Asia/Shanghai}
-      FABRICVIVA_CATALOG_PATH: /opt/uootd-site/catalog/fabricviva-catalog.json
+      FABRICVIVA_CATALOG_PATH: /opt/uootd-catalog/fabricviva-catalog.json
+      FABRICVIVA_IMPORT_SCRIPT_PATH: /opt/uootd-scripts/import_fabricviva_catalog.php
     volumes:
       - upholsteryfabric_wordpress:/var/www/html
-      - ./:/opt/uootd-site:ro
+      - ./scripts:/opt/uootd-scripts:ro
+      - ./catalog:/opt/uootd-catalog:ro
     restart: unless-stopped
     command:
       - sh
       - -lc
-      - sh /opt/uootd-site/scripts/wp-init.sh && while true; do sleep 3600; done
+      - sh /opt/uootd-scripts/wp-init.sh && while true; do sleep 3600; done
 
 volumes:
   upholsteryfabric_db:

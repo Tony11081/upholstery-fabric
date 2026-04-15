@@ -338,7 +338,6 @@ function uootd_storefront_branding_adjust_page_content( $content ) {
 
 function uootd_storefront_branding_render_front_page() {
 	$shop_url        = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/shop/' );
-	$account_url     = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/my-account/' );
 	$new_in_url      = uootd_storefront_branding_get_page_url( 'new-in', '/new-in/' );
 	$trending_url    = uootd_storefront_branding_get_page_url( 'trending', '/trending/' );
 	$designers_url   = uootd_storefront_branding_get_page_url( 'designers', '/designers/' );
@@ -379,10 +378,49 @@ function uootd_storefront_branding_render_front_page() {
 	$featured_copy    = $hero_term && ! empty( $hero_term['description'] ) ? $hero_term['description'] : ( $is_fabric_site ? 'Designer-inspired upholstery fabrics, jacquards, and textured weaves selected for a faster browse.' : 'Structured silhouettes and softer neutrals chosen to anchor the edit.' );
 	$hero_image       = $hero_term && ! empty( $hero_term['image_full'] ) ? $hero_term['image_full'] : '';
 
-	$live_count      = uootd_storefront_branding_get_live_product_count();
+	$live_count        = uootd_storefront_branding_get_live_product_count();
+	$brand_count       = max( 1, uootd_storefront_branding_get_fabric_brand_count() );
 	$collage_primary = $hero_image;
 	$collage_secondary = $secondary_term && ! empty( $secondary_term['image_full'] ) ? $secondary_term['image_full'] : $collage_primary;
 	$dual_cards = array();
+	$new_in_title = $is_fabric_site ? 'New Arrivals' : 'New In';
+	$homepage_metrics = $is_fabric_site
+		? array(
+			array(
+				'value' => number_format_i18n( $live_count ),
+				'label' => 'fabrics live now',
+			),
+			array(
+				'value' => number_format_i18n( $brand_count ),
+				'label' => 'brand-led routes',
+			),
+			array(
+				'value' => 'By yard',
+				'label' => 'source pricing kept',
+			),
+			array(
+				'value' => 'Support',
+				'label' => 'before checkout',
+			),
+		)
+		: array(
+			array(
+				'value' => number_format_i18n( $live_count ),
+				'label' => 'pieces live now',
+			),
+			array(
+				'value' => 'Designers',
+				'label' => 'ready to browse',
+			),
+			array(
+				'value' => '24/7',
+				'label' => 'secure checkout flow',
+			),
+			array(
+				'value' => 'Support',
+				'label' => 'before and after checkout',
+			),
+		);
 
 	if ( $secondary_term ) {
 		$dual_cards[] = array(
@@ -424,17 +462,17 @@ function uootd_storefront_branding_render_front_page() {
 				'image'   => ! empty( $product_images[0] ) ? $product_images[0] : $collage_primary,
 			),
 			array(
-				'eyebrow' => 'New arrivals',
-				'title'   => 'See the latest fabric drops',
-				'copy'    => 'Fresh upholstery fabrics, monogram jacquards, and decorative weaves surface here first.',
-				'action'  => 'Shop new arrivals',
-				'url'     => $new_in_url,
+				'eyebrow' => 'Brands',
+				'title'   => 'Jump in by brand',
+				'copy'    => 'Use the brand-led index to compare Gucci, LV, Dior, Fendi, and other fabric lines without scanning the full catalog first.',
+				'action'  => 'Browse brands',
+				'url'     => $designers_url,
 				'image'   => ! empty( $product_images[1] ) ? $product_images[1] : $collage_secondary,
 			),
 			array(
 				'eyebrow' => 'Support',
-				'title'   => 'Get help before you order yardage',
-				'copy'    => 'Questions about weight, texture, delivery, or order status stay one clear step from the homepage.',
+				'title'   => 'Ask before you commit yardage',
+				'copy'    => 'Questions about width, weight, texture, continuous cuts, delivery, or order timing stay one clear step from the homepage.',
 				'action'  => 'Open support',
 				'url'     => $care_url,
 				'image'   => ! empty( $product_images[2] ) ? $product_images[2] : $feature_image,
@@ -491,6 +529,15 @@ function uootd_storefront_branding_render_front_page() {
 			</a>
 		</section>
 
+		<section class="uootd-home-metrics" aria-label="<?php echo esc_attr( $is_fabric_site ? 'Catalog highlights' : 'Storefront highlights' ); ?>">
+			<?php foreach ( $homepage_metrics as $metric ) : ?>
+				<div class="uootd-home-metric">
+					<strong><?php echo esc_html( $metric['value'] ); ?></strong>
+					<span><?php echo esc_html( $metric['label'] ); ?></span>
+				</div>
+			<?php endforeach; ?>
+		</section>
+
 		<section class="uootd-home-collage" aria-label="Lead story">
 			<div class="uootd-home-collage__grid">
 				<a class="uootd-home-collage__card uootd-home-collage__card--primary" href="<?php echo esc_url( $featured_url ); ?>">
@@ -515,9 +562,9 @@ function uootd_storefront_branding_render_front_page() {
 		<section class="uootd-home-newin" aria-label="New in">
 			<a class="uootd-home-newin__lead" href="<?php echo esc_url( $new_in_url ); ?>">
 				<p><?php echo esc_html( number_format_i18n( $live_count ) ); ?> <?php echo esc_html( uootd_storefront_branding_get_product_unit_label( $live_count ) ); ?> live now</p>
-				<h2>New In</h2>
-				<span><?php echo esc_html( $is_fabric_site ? 'New arrivals refreshed through the week across jacquard, chenille, monogram, and decorative upholstery fabrics.' : 'New arrivals refreshed through the week across bags, jewelry and the finishing accessories that complete the look.' ); ?></span>
-				<strong>Shop New In</strong>
+				<h2><?php echo esc_html( $new_in_title ); ?></h2>
+				<span><?php echo esc_html( $is_fabric_site ? 'Fresh upholstery fabrics, jacquards, and decorative weaves surface here first, with a short path into support or checkout.' : 'New arrivals refreshed through the week across bags, jewelry and the finishing accessories that complete the look.' ); ?></span>
+				<strong><?php echo esc_html( $is_fabric_site ? 'Shop New Arrivals' : 'Shop New In' ); ?></strong>
 			</a>
 			<div class="uootd-home-products__grid">
 				<?php foreach ( array_slice( $products, 0, 4 ) as $product ) : ?>
@@ -545,8 +592,8 @@ function uootd_storefront_branding_render_front_page() {
 		<section class="uootd-home-discover" aria-label="Discover more">
 			<div class="uootd-home-section-head">
 				<p>Discover more</p>
-				<h2><?php echo esc_html( $is_fabric_site ? 'Finding the right fabric should feel faster.' : 'The next move should feel obvious.' ); ?></h2>
-				<span><?php echo esc_html( $is_fabric_site ? 'Core collections, new arrivals, and fabric support now sit closer to the homepage, so the catalog feels easier to compare and easier to trust.' : 'Designers, trending pieces and customer care now sit closer to the homepage, so the site feels easier to trust and easier to browse.' ); ?></span>
+				<h2><?php echo esc_html( $is_fabric_site ? 'Finding the right fabric should feel faster and safer.' : 'The next move should feel obvious.' ); ?></h2>
+				<span><?php echo esc_html( $is_fabric_site ? 'The homepage now pushes the three real buying moves forward: broad catalog browse, brand-level comparison, and support before you commit yardage.' : 'Designers, trending pieces and customer care now sit closer to the homepage, so the site feels easier to trust and easier to browse.' ); ?></span>
 			</div>
 			<div class="uootd-home-discover__grid">
 				<?php foreach ( $discover_cards as $card ) : ?>
@@ -565,23 +612,27 @@ function uootd_storefront_branding_render_front_page() {
 			</div>
 		</section>
 
-		<section class="uootd-home-assurance" aria-label="Official site guide">
+		<section class="uootd-home-assurance" aria-label="<?php echo esc_attr( $is_fabric_site ? 'Storefront reassurance' : 'Official site guide' ); ?>">
 			<div class="uootd-home-assurance__copy">
-				<p>Official site guide</p>
-				<h2>The right storefront, a faster path into the catalog, and clearer support before checkout.</h2>
-				<span><?php echo esc_html( $is_fabric_site ? 'Visitors looking for upholsteryfabric.net usually want the real fabric catalog, a direct route into upholstery and jacquard collections, and enough support detail to keep moving before checkout. The homepage now surfaces those answers earlier.' : 'Visitors looking for the UOOTD official site usually want the real storefront, a direct route into bags and enough support detail to keep moving. The homepage now surfaces those answers earlier.' ); ?></span>
+				<p><?php echo esc_html( $is_fabric_site ? 'Why customers shop here' : 'Official site guide' ); ?></p>
+				<h2><?php echo esc_html( $is_fabric_site ? 'Built for fabric comparison, clearer ordering, and fewer dead ends.' : 'The right storefront, a faster path into the catalog, and clearer support before checkout.' ); ?></h2>
+				<span><?php echo esc_html( $is_fabric_site ? 'This storefront is tuned for upholstery-fabric shopping instead of generic Woo clutter: gallery-led product pages, source-aligned pricing, by-the-yard guidance, and support that stays one click away before checkout.' : 'Visitors looking for the UOOTD official site usually want the real storefront, a direct route into bags and enough support detail to keep moving. The homepage now surfaces those answers earlier.' ); ?></span>
 				<div class="uootd-home-assurance__points">
-					<span><?php echo esc_html( $is_fabric_site ? 'Official upholstery fabric storefront' : 'Official UOOTD storefront' ); ?></span>
-					<span>Secure card checkout</span>
+					<span><?php echo esc_html( $is_fabric_site ? 'Source pricing kept on the catalog snapshot' : 'Official UOOTD storefront' ); ?></span>
+					<span><?php echo esc_html( $is_fabric_site ? 'By-the-yard ordering language on product pages' : 'Secure card checkout' ); ?></span>
 					<span>Tracked dispatch support</span>
-					<span><?php echo esc_html( $is_fabric_site ? 'Fabric support and order guidance' : 'Returns and order guidance' ); ?></span>
+					<span><?php echo esc_html( $is_fabric_site ? 'Fabric support before checkout' : 'Returns and order guidance' ); ?></span>
 				</div>
 				<div class="uootd-home-assurance__links">
+					<?php if ( $is_fabric_site ) : ?>
+						<a href="<?php echo esc_url( $shop_url ); ?>">All Fabrics</a>
+						<a href="<?php echo esc_url( $designers_url ); ?>">Brands</a>
+					<?php endif; ?>
 					<a href="<?php echo esc_url( $care_url ); ?>"><?php echo esc_html( uootd_storefront_branding_get_support_team_title() ); ?></a>
 					<a href="<?php echo esc_url( $track_order_url ); ?>">Track your order</a>
 					<a href="<?php echo esc_url( $delivery_url ); ?>">Delivery</a>
-					<a href="<?php echo esc_url( $returns_url ); ?>">Returns</a>
 					<a href="<?php echo esc_url( $payment_url ); ?>">Payment</a>
+					<a href="<?php echo esc_url( $returns_url ); ?>">Returns</a>
 				</div>
 			</div>
 			<div class="uootd-home-assurance__faq">
@@ -764,17 +815,17 @@ function uootd_storefront_branding_render_single_product_secondary_cta() {
 	>
 		<?php echo esc_html( uootd_storefront_branding_get_add_to_cart_label() ); ?>
 	</button>
-	<p class="uootd-product-cta-note">Buy now opens secure checkout with this item immediately. <?php echo esc_html( uootd_storefront_branding_get_add_to_cart_label() ); ?> is better when you want to keep browsing and combine items in one <?php echo esc_html( strtolower( uootd_storefront_branding_get_cart_label() ) ); ?>.</p>
+	<p class="uootd-product-cta-note"><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Buy Now sends this fabric straight into secure checkout. Add to Cart is better when you want to compare multiple fabrics, combine colors, or build one larger yardage order in a single cart.' : 'Buy now opens secure checkout with this item immediately. ' . uootd_storefront_branding_get_add_to_cart_label() . ' is better when you want to keep browsing and combine items in one ' . strtolower( uootd_storefront_branding_get_cart_label() ) . '.' ); ?></p>
 	<?php
 }
 
 function uootd_storefront_branding_product_tabs( $tabs ) {
 	if ( isset( $tabs['description'] ) ) {
-		$tabs['description']['title'] = 'Details';
+		$tabs['description']['title'] = uootd_storefront_branding_is_fabric_catalog() ? 'Fabric Details' : 'Details';
 	}
 
 	if ( isset( $tabs['additional_information'] ) ) {
-		$tabs['additional_information']['title'] = 'Product Notes';
+		$tabs['additional_information']['title'] = uootd_storefront_branding_is_fabric_catalog() ? 'Specs & Care' : 'Product Notes';
 	}
 
 	unset( $tabs['reviews'] );
@@ -783,7 +834,7 @@ function uootd_storefront_branding_product_tabs( $tabs ) {
 }
 
 function uootd_storefront_branding_related_heading() {
-	return 'More from the edit';
+	return uootd_storefront_branding_is_fabric_catalog() ? 'More fabrics to compare' : 'More from the edit';
 }
 
 function uootd_storefront_branding_related_args( $args ) {
@@ -855,11 +906,11 @@ function uootd_storefront_branding_get_home_faq_items() {
 			),
 			array(
 				'question' => 'What can I shop on ' . $brand_name . '?',
-				'answer'   => 'The catalog focuses on upholstery fabrics by the yard, including Gucci-inspired, LV-inspired, Dior-inspired, Fendi-inspired, and other decorative woven options.',
+				'answer'   => 'The catalog focuses on upholstery fabrics by the yard, including Gucci-inspired, LV-inspired, Dior-inspired, Fendi-inspired, jacquard, and other decorative woven options.',
 			),
 			array(
 				'question' => 'Are these fabrics sold by the yard?',
-				'answer'   => 'Yes. Product pages keep the source pricing and ordering structure so you can review yardage options before checkout.',
+				'answer'   => 'Yes. Product pages keep the source pricing structure, clarify yardage ordering, and note that multi-yard orders stay in one continuous cut when available.',
 			),
 			array(
 				'question' => 'Where should I start if I want upholstery fabric fast?',
@@ -1353,6 +1404,16 @@ function uootd_storefront_branding_get_live_product_count() {
 	return isset( $product_count->publish ) ? (int) $product_count->publish : 0;
 }
 
+function uootd_storefront_branding_get_fabric_brand_count() {
+	if ( ! uootd_storefront_branding_is_fabric_catalog() || ! function_exists( 'uootd_storefront_branding_get_designer_catalog' ) ) {
+		return 0;
+	}
+
+	$catalog = uootd_storefront_branding_get_designer_catalog();
+
+	return is_array( $catalog ) ? count( $catalog ) : 0;
+}
+
 function uootd_storefront_branding_get_archive_stats() {
 	if ( is_shop() ) {
 		if ( uootd_storefront_branding_is_fabric_catalog() ) {
@@ -1362,12 +1423,12 @@ function uootd_storefront_branding_get_archive_stats() {
 					'label' => uootd_storefront_branding_get_product_unit_label( 2 ) . ' live now',
 				),
 				array(
-					'value' => '7',
-					'label' => 'main collections',
+					'value' => number_format_i18n( max( 1, uootd_storefront_branding_get_fabric_brand_count() ) ),
+					'label' => 'brand-led routes',
 				),
 				array(
-					'value' => '24/7',
-					'label' => 'secure checkout flow',
+					'value' => 'By yard',
+					'label' => 'ordering kept clear',
 				),
 			);
 		}
@@ -1647,24 +1708,103 @@ function uootd_storefront_branding_render_product_support() {
 	?>
 	<section class="uootd-product-support" aria-label="Purchase support">
 		<div>
-			<strong>Secure card checkout</strong>
-			<span>Hosted payment page with order confirmation and a clean redirect flow.</span>
+			<strong><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Price kept per yard' : 'Secure card checkout' ); ?></strong>
+			<span><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Product pages and checkout keep the imported pricing structure aligned, so there is less friction between browse, cart, and payment.' : 'Hosted payment page with order confirmation and a clean redirect flow.' ); ?></span>
 		</div>
 		<div>
-			<strong>Tracked dispatch</strong>
-			<span>Orders move through a secure handoff with tracking once your payment is confirmed.</span>
+			<strong><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Continuous cuts when possible' : 'Tracked dispatch' ); ?></strong>
+			<span><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Multiple quantities are intended to stay in one continuous piece when stock allows, which is easier for upholstery, cushions, and custom projects.' : 'Orders move through a secure handoff with tracking once your payment is confirmed.' ); ?></span>
 		</div>
 		<div>
-			<strong>Concierge help</strong>
-			<span>Need help confirming size or finish? Leave a note at checkout and we review it before dispatch.</span>
+			<strong><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Fabric support' : 'Concierge help' ); ?></strong>
+			<span><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Need help confirming width, weight, texture, or upholstery suitability? Contact Fabric Support before checkout so the order feels lower risk.' : 'Need help confirming size or finish? Leave a note at checkout and we review it before dispatch.' ); ?></span>
 		</div>
 	</section>
 	<?php
 }
 
+function uootd_storefront_branding_format_fabric_description( $description ) {
+	$normalized = preg_replace( '/<br\s*\/?>/i', "\n", (string) $description );
+	$normalized = html_entity_decode( wp_strip_all_tags( $normalized ), ENT_QUOTES, get_bloginfo( 'charset' ) );
+	$lines      = preg_split( '/\r\n|\r|\n/', $normalized );
+	$intro      = array();
+	$details    = array();
+	$notes      = array();
+
+	foreach ( (array) $lines as $line ) {
+		$line = trim( preg_replace( '/\s+/', ' ', (string) $line ) );
+		$line = trim( $line, " \t\n\r\0\x0B+=" );
+		$line = preg_replace( '/^(?:\x{1F449}|\x{2764}\x{FE0F})\s*/u', '', $line );
+
+		if ( '' === $line || false !== stripos( $line, 'detail' ) ) {
+			continue;
+		}
+
+		if ( false !== strpos( $line, ':' ) ) {
+			list( $label, $value ) = array_map( 'trim', explode( ':', $line, 2 ) );
+			$label = ucwords( strtolower( $label ) );
+			$line  = '' !== $value ? $label . ': ' . $value : $label;
+		}
+
+		if ( preg_match( '/^(Material|Width|Weight|Care)\b/i', $line ) ) {
+			$details[] = $line;
+			continue;
+		}
+
+		if ( preg_match( '/^(Price per Yard|Qty\s*\d+|Multiple quantities|Colors may look)/i', $line ) ) {
+			$notes[] = $line;
+			continue;
+		}
+
+		$intro[] = $line;
+	}
+
+	if ( empty( $intro ) && empty( $details ) && empty( $notes ) ) {
+		return '';
+	}
+
+	ob_start();
+	?>
+	<div class="uootd-product-summary-copy">
+		<?php foreach ( array_slice( $intro, 0, 2 ) as $paragraph ) : ?>
+			<p><?php echo esc_html( $paragraph ); ?></p>
+		<?php endforeach; ?>
+		<?php if ( ! empty( $details ) ) : ?>
+			<div class="uootd-product-summary-copy__group">
+				<strong>Fabric details</strong>
+				<ul>
+					<?php foreach ( $details as $detail ) : ?>
+						<li><?php echo esc_html( $detail ); ?></li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
+		<?php if ( ! empty( $notes ) ) : ?>
+			<div class="uootd-product-summary-copy__group">
+				<strong>Ordering notes</strong>
+				<ul>
+					<?php foreach ( $notes as $note ) : ?>
+						<li><?php echo esc_html( $note ); ?></li>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		<?php endif; ?>
+	</div>
+	<?php
+	return (string) ob_get_clean();
+}
+
 function uootd_storefront_branding_format_short_description( $description ) {
 	if ( is_admin() || ! is_product() ) {
 		return $description;
+	}
+
+	if ( uootd_storefront_branding_is_fabric_catalog() ) {
+		$formatted_fabric_description = uootd_storefront_branding_format_fabric_description( $description );
+
+		if ( '' !== $formatted_fabric_description ) {
+			return $formatted_fabric_description;
+		}
 	}
 
 	$plain = trim( preg_replace( '/\s+/', ' ', wp_strip_all_tags( $description ) ) );
@@ -1715,16 +1855,18 @@ function uootd_storefront_branding_render_footer() {
 	$cart_url      = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/cart/' );
 	$checkout_url  = function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : home_url( '/checkout/' );
 	$new_in_url    = uootd_storefront_branding_get_page_url( 'new-in', '/new-in/' );
+	$designers_url = uootd_storefront_branding_get_page_url( 'designers', '/designers/' );
 	$care_url      = uootd_storefront_branding_get_page_url( 'customer-care', '/customer-care/' );
 	$delivery_url  = uootd_storefront_branding_get_page_url( 'delivery', '/delivery/' );
 	$payment_url   = uootd_storefront_branding_get_page_url( 'payment', '/payment/' );
 	$returns_url   = uootd_storefront_branding_get_page_url( 'exchanges-returns', '/exchanges-returns/' );
 	$wishlist_url  = uootd_storefront_branding_get_page_url( 'wishlist', '/wishlist/' );
 	$rewards_url   = uootd_storefront_branding_get_page_url( 'rewards', '/rewards/' );
+	$is_fabric_site = uootd_storefront_branding_is_fabric_catalog();
 	$category_urls = array();
 	$category_slugs = uootd_storefront_branding_get_category_slug_list(
 		'footer_category_slugs',
-		uootd_storefront_branding_is_fabric_catalog()
+		$is_fabric_site
 			? array( 'all-fabrics', 'gucci-fabric', 'lv-fabric', 'dior-fabric', 'fendi-fabric', 'jacquard-fabric' )
 			: array( 'bags', 'jewelry', 'accessories' )
 	);
@@ -1742,14 +1884,17 @@ function uootd_storefront_branding_render_footer() {
 			<h2><?php echo esc_html( uootd_storefront_branding_get_footer_heading() ); ?></h2>
 			<p><?php echo esc_html( uootd_storefront_branding_get_footer_description() ); ?></p>
 			<div class="uootd-site-footer__signup-actions">
-				<a href="<?php echo esc_url( $new_in_url ); ?>"><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'Shop New Arrivals' : 'Shop New In' ); ?></a>
-				<a href="<?php echo esc_url( $account_url ); ?>"><?php echo esc_html( uootd_storefront_branding_get_support_team_title() ); ?></a>
+				<a href="<?php echo esc_url( $new_in_url ); ?>"><?php echo esc_html( $is_fabric_site ? 'Shop New Arrivals' : 'Shop New In' ); ?></a>
+				<a href="<?php echo esc_url( $is_fabric_site ? $care_url : $account_url ); ?>"><?php echo esc_html( uootd_storefront_branding_get_support_team_title() ); ?></a>
 			</div>
 		</div>
 		<div class="uootd-site-footer__columns">
 			<div>
 				<p><?php echo esc_html( uootd_storefront_branding_get_support_team_title() ); ?></p>
 				<a href="<?php echo esc_url( $care_url ); ?>"><?php echo esc_html( uootd_storefront_branding_get_support_team_title() ); ?></a>
+				<?php if ( $is_fabric_site ) : ?>
+					<a href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'contact-us', '/contact-us/' ) ); ?>">Contact us</a>
+				<?php endif; ?>
 				<a href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'track-order', '/track-order/' ) ); ?>">Track your order</a>
 				<a href="<?php echo esc_url( $payment_url ); ?>">Payment</a>
 				<a href="<?php echo esc_url( $returns_url ); ?>">Returns</a>
@@ -1757,24 +1902,34 @@ function uootd_storefront_branding_render_footer() {
 			<div>
 				<p>Shop</p>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a>
-				<a href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'new-in', '/new-in/' ) ); ?>"><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'New Arrivals' : 'New In' ); ?></a>
-				<a href="<?php echo esc_url( uootd_storefront_branding_is_fabric_catalog() ? $shop_url : uootd_storefront_branding_get_page_url( 'designers', '/designers/' ) ); ?>"><?php echo esc_html( uootd_storefront_branding_is_fabric_catalog() ? 'All Fabrics' : 'Designers' ); ?></a>
+				<a href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'new-in', '/new-in/' ) ); ?>"><?php echo esc_html( $is_fabric_site ? 'New Arrivals' : 'New In' ); ?></a>
+				<a href="<?php echo esc_url( $is_fabric_site ? $shop_url : $designers_url ); ?>"><?php echo esc_html( $is_fabric_site ? 'All Fabrics' : 'Designers' ); ?></a>
+				<?php if ( $is_fabric_site ) : ?>
+					<a href="<?php echo esc_url( $designers_url ); ?>">Brands</a>
+				<?php endif; ?>
 				<?php foreach ( $category_urls as $label => $url ) : ?>
 					<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $label ); ?></a>
 				<?php endforeach; ?>
 			</div>
 			<div>
-				<p>Why shop with us</p>
-				<a href="<?php echo esc_url( $checkout_url ); ?>">Secure card checkout</a>
-				<a href="<?php echo esc_url( $wishlist_url ); ?>">Wish list</a>
-				<a href="<?php echo esc_url( $rewards_url ); ?>">Rewards</a>
-				<a href="<?php echo esc_url( $delivery_url ); ?>">Tracked delivery</a>
+				<p><?php echo esc_html( $is_fabric_site ? 'Ordering help' : 'Why shop with us' ); ?></p>
+				<?php if ( $is_fabric_site ) : ?>
+					<a href="<?php echo esc_url( $shop_url ); ?>">Buy by the yard</a>
+					<a href="<?php echo esc_url( $checkout_url ); ?>">Secure card checkout</a>
+					<a href="<?php echo esc_url( $delivery_url ); ?>">Tracked delivery</a>
+					<a href="<?php echo esc_url( $care_url ); ?>">Ask before checkout</a>
+				<?php else : ?>
+					<a href="<?php echo esc_url( $checkout_url ); ?>">Secure card checkout</a>
+					<a href="<?php echo esc_url( $wishlist_url ); ?>">Wish list</a>
+					<a href="<?php echo esc_url( $rewards_url ); ?>">Rewards</a>
+					<a href="<?php echo esc_url( $delivery_url ); ?>">Tracked delivery</a>
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="uootd-site-footer__meta">
 			<span>Secure card checkout</span>
 			<span>Tracked dispatch</span>
-			<span>Client account support</span>
+			<span><?php echo esc_html( $is_fabric_site ? 'Fabric support before checkout' : 'Client account support' ); ?></span>
 		</div>
 	</div>
 	<?php

@@ -359,6 +359,8 @@ function uootd_storefront_branding_render_discovery_shell() {
 	$bag_count  = function_exists( 'WC' ) && WC()->cart ? (int) WC()->cart->get_cart_contents_count() : 0;
 	$bag_url    = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/cart/' );
 	$account    = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'myaccount' ) : home_url( '/my-account/' );
+	$is_fabric_site = uootd_storefront_branding_is_fabric_catalog();
+	$designers_url  = uootd_storefront_branding_get_page_url( 'designers', '/designers/' );
 	$search_url = uootd_storefront_branding_get_page_url( 'search', '/search/' );
 	?>
 	<div class="uootd-shell">
@@ -376,7 +378,11 @@ function uootd_storefront_branding_render_discovery_shell() {
 			</div>
 			<div class="uootd-shell__actions">
 				<button type="button" class="uootd-shell__action uootd-shell__action--search" data-uootd-search-open>Search</button>
-				<a class="uootd-shell__action uootd-shell__action--rewards" href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'rewards', '/rewards/' ) ); ?>">Rewards</a>
+				<?php if ( $is_fabric_site ) : ?>
+					<a class="uootd-shell__action uootd-shell__action--brands" href="<?php echo esc_url( $designers_url ); ?>">Brands</a>
+				<?php else : ?>
+					<a class="uootd-shell__action uootd-shell__action--rewards" href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'rewards', '/rewards/' ) ); ?>">Rewards</a>
+				<?php endif; ?>
 				<a class="uootd-shell__action uootd-shell__action--account" href="<?php echo esc_url( $account ); ?>">Sign In</a>
 				<a class="uootd-shell__action uootd-shell__action--wishlist" href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'wishlist', '/wishlist/' ) ); ?>">Wish List <span data-uootd-wishlist-count>0</span></a>
 				<a class="uootd-shell__action uootd-shell__action--service" href="<?php echo esc_url( uootd_storefront_branding_get_page_url( 'customer-care', '/customer-care/' ) ); ?>"><?php echo esc_html( uootd_storefront_branding_get_support_team_title() ); ?></a>

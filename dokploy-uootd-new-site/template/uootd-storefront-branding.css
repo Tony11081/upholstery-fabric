@@ -3017,3 +3017,116 @@ body.uootd-storefront-shell .site-footer .col-full {
 		display: grid;
 	}
 }
+
+body.uootd-storefront-shell #secondary,
+body.uootd-storefront-shell .widget-area {
+	display: none;
+}
+
+body.uootd-storefront-shell #primary,
+body.uootd-storefront-shell .content-area,
+body.uootd-storefront-shell .site-main,
+body.uootd-storefront-shell .hentry,
+body.uootd-storefront-shell .entry-content,
+body.uootd-storefront-shell.right-sidebar .content-area,
+body.uootd-storefront-shell.left-sidebar .content-area {
+	width: 100%;
+	max-width: none;
+	float: none;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+body.uootd-storefront-shell .site-content .col-full {
+	display: block;
+}
+
+body.uootd-storefront-home .uootd-home-metrics {
+	width: min(1480px, calc(100vw - 32px));
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+body.uootd-storefront-home .uootd-home-metric {
+	padding: 1.15rem 1.2rem;
+	border: 1px solid var(--uootd-line);
+	background: #faf7f2;
+}
+
+body.uootd-storefront-home .uootd-home-metric strong {
+	display: block;
+	font-size: clamp(1.35rem, 2.4vw, 2.15rem);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	color: #111111;
+}
+
+body.uootd-storefront-home .uootd-home-metric span {
+	display: block;
+	margin-top: 0.3rem;
+	font-size: 0.74rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #786a57;
+}
+
+body.uootd-storefront-home .uootd-home-assurance__links {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.uootd-product-summary-copy {
+	display: grid;
+	gap: 1rem;
+}
+
+.uootd-product-summary-copy p {
+	margin: 0;
+	line-height: 1.8;
+}
+
+.uootd-product-summary-copy__group {
+	padding-top: 0.85rem;
+	border-top: 1px solid var(--uootd-line);
+}
+
+.uootd-product-summary-copy__group strong {
+	display: block;
+	margin: 0 0 0.6rem;
+	font-size: 0.72rem;
+	font-weight: 800;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+	color: #786a57;
+}
+
+.uootd-product-summary-copy__group ul {
+	margin: 0;
+	padding-left: 1.1rem;
+	display: grid;
+	gap: 0.45rem;
+	color: var(--uootd-muted);
+}
+
+.uootd-product-summary-copy__group li {
+	line-height: 1.7;
+}
+
+@media (max-width: 940px) {
+	body.uootd-storefront-home .uootd-home-metrics {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	body.uootd-storefront-home .uootd-home-assurance__links {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	body.uootd-storefront-home .uootd-home-metrics {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		width: calc(100vw - 32px);
+	}
+}

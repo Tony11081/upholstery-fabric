@@ -65,36 +65,48 @@ services:
       - -lc
       - |
           set -eu
+          sync_uootd_shell() {
+            mkdir -p /var/www/html/wp-content/mu-plugins
+            mkdir -p /var/www/html/wp-content/uploads/uootd-generated
+
+            cp /opt/uootd-template/uootd-000-shell-config.php /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-storefront-branding.php /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-storefront-branding.css /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-storefront-branding.js /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-storefront-parity.php /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-storefront-parity.css /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-checkout-branding.php /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-checkout-branding.css /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-checkout-branding.js /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-inflyway-gateway.php /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-template/uootd-inflyway-blocks.js /var/www/html/wp-content/mu-plugins/
+            cp /opt/uootd-shell-config.local.php /var/www/html/wp-content/mu-plugins/uootd-shell-config.local.php
+            cp /opt/uootd-template/uootd-generated/*-generated.png /var/www/html/wp-content/uploads/uootd-generated/
+
+            find /var/www/html/wp-content/mu-plugins -maxdepth 1 -name '*.php' -print0 | while IFS= read -r -d '' file; do
+              php -r '$$file = $$argv[1]; $$contents = file_get_contents($$file); if (strncmp($$contents, "\xEF\xBB\xBF", 3) === 0) { file_put_contents($$file, substr($$contents, 3)); }' "$$file"
+            done
+          }
+
           if [ ! -f /var/www/html/index.php ]; then
             tar -C /usr/src/wordpress -cf - . | tar -C /var/www/html -xf -
           fi
           rm -f /var/www/html/wp-config.php
-          mkdir -p /var/www/html/wp-content/mu-plugins
-          mkdir -p /var/www/html/wp-content/uploads/uootd-generated
-
-          cp /opt/uootd-template/uootd-000-shell-config.php /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-storefront-branding.php /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-storefront-branding.css /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-storefront-branding.js /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-storefront-parity.php /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-storefront-parity.css /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-checkout-branding.php /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-checkout-branding.css /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-checkout-branding.js /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-inflyway-gateway.php /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-template/uootd-inflyway-blocks.js /var/www/html/wp-content/mu-plugins/
-          cp /opt/uootd-shell-config.local.php /var/www/html/wp-content/mu-plugins/uootd-shell-config.local.php
-          cp /opt/uootd-template/uootd-generated/*-generated.png /var/www/html/wp-content/uploads/uootd-generated/
-
-          find /var/www/html/wp-content/mu-plugins -maxdepth 1 -name '*.php' -print0 | while IFS= read -r -d '' file; do
-            php -r '$$file = $$argv[1]; $$contents = file_get_contents($$file); if (strncmp($$contents, "\xEF\xBB\xBF", 3) === 0) { file_put_contents($$file, substr($$contents, 3)); }' "$$file"
-          done
+          sync_uootd_shell
 
           if [ -f /var/www/html/wp-config.php ] && [ ! -s /var/www/html/wp-config.php ]; then
             rm -f /var/www/html/wp-config.php
           fi
 
           chown -R www-data:www-data /var/www/html
+
+          (
+            while true; do
+              sleep 15
+              sync_uootd_shell
+              chown -R www-data:www-data /var/www/html/wp-content/mu-plugins /var/www/html/wp-content/uploads/uootd-generated
+            done
+          ) &
 
           exec docker-entrypoint.sh apache2-foreground
 

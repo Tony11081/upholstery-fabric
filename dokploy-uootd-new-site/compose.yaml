@@ -68,9 +68,18 @@ services:
           cp /opt/uootd-template/uootd-inflyway-blocks.js /var/www/html/wp-content/mu-plugins/
           cp /opt/uootd-site/uootd-shell-config.local.php /var/www/html/wp-content/mu-plugins/uootd-shell-config.local.php
           cp /opt/uootd-template/uootd-generated/*-generated.png /var/www/html/wp-content/uploads/uootd-generated/
+
+          find /var/www/html/wp-content/mu-plugins -maxdepth 1 -name '*.php' -print0 | while IFS= read -r -d '' file; do
+            php -r '$file = $argv[1]; $contents = file_get_contents($file); if (strncmp($contents, "\xEF\xBB\xBF", 3) === 0) { file_put_contents($file, substr($contents, 3)); }' "$file"
+          done
+
+          if [ -f /var/www/html/wp-config.php ] && [ ! -s /var/www/html/wp-config.php ]; then
+            rm -f /var/www/html/wp-config.php
+          fi
+
           chown -R www-data:www-data /var/www/html
 
-          exec apache2-foreground
+          exec docker-entrypoint.sh apache2-foreground
 
   wp-setup:
     image: wordpress:cli-php8.2

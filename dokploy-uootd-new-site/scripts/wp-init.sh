@@ -7,27 +7,10 @@ wait_for_wordpress_files() {
   done
 }
 
-ensure_wp_config() {
-  if [ -f /var/www/html/wp-config.php ]; then
-    return
-  fi
-
-  wp config create \
-    --path=/var/www/html \
-    --dbname="${WORDPRESS_DB_NAME}" \
-    --dbuser="${WORDPRESS_DB_USER}" \
-    --dbpass="${WORDPRESS_DB_PASSWORD}" \
-    --dbhost="${WORDPRESS_DB_HOST}" \
-    --dbprefix="${WORDPRESS_TABLE_PREFIX}" \
-    --skip-check \
-    --allow-root \
-    --extra-php <<'PHP'
-define( 'WP_HOME', getenv( 'WP_SITE_URL' ) );
-define( 'WP_SITEURL', getenv( 'WP_SITE_URL' ) );
-define( 'FS_METHOD', 'direct' );
-define( 'DISALLOW_FILE_EDIT', true );
-define( 'AUTOMATIC_UPDATER_DISABLED', true );
-PHP
+wait_for_wp_config() {
+  until [ -s /var/www/html/wp-config.php ]; do
+    sleep 3
+  done
 }
 
 wait_for_database() {
@@ -150,7 +133,7 @@ import_fabricviva_catalog() {
 }
 
 wait_for_wordpress_files
-ensure_wp_config
+wait_for_wp_config
 wait_for_database
 install_wordpress_if_needed
 install_woocommerce_stack

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Plugin Name: UOOTD Checkout Branding
  * Description: Adds a branded cart and checkout shell for the UOOTD storefront.
